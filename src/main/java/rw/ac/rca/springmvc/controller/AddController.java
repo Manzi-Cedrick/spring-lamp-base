@@ -21,11 +21,13 @@ public class AddController {
         CalculatorService calcService = new CalculatorService();
         double sum = calcService.addTwoNumbers(a, b);
         double prod = calcService.multiplyTwoNumbers(a, b);
+        double sub = calcService.substractTwoNumbers(a,b );
         ModelAndView mv = new ModelAndView();
         mv.setViewName("results.jsp");
         mv.addObject("fv", a);
         mv.addObject("sv", b);
         mv.addObject("theSum", sum);
+        mv.addObject("sub",sub);
         mv.addObject("product", prod);
         return mv;
     }
